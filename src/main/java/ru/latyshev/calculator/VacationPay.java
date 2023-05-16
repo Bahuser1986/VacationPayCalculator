@@ -1,13 +1,13 @@
 package ru.latyshev.calculator;
 
 public class VacationPay {
-    private final double vacationPay;
+    private final String vacationPay;
 
-    public VacationPay(double vacationPay) {
+    public VacationPay(String vacationPay) {
         this.vacationPay = vacationPay;
     }
 
-    public double getVacationPay() {
+    public String getVacationPay() {
         return vacationPay;
     }
 }
