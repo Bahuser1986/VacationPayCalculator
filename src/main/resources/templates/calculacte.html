@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+<h1>Vacation Pay Calculator</h1>
+<form action="" method="get">
+    <label>Enter average salary: </label>
+    <input type="text" name="avgSalary"/><br>
+    <label>Enter number of vacation days: </label>
+    <input type="text" name="vacationDays"/><br>
+    <label>Your vacation pay: </label>
+    <p th:text="${result}"></p>
+    <input type="submit" value="Calculate!">
+</form>
+</body>
+</html>
