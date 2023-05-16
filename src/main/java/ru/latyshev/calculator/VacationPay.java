@@ -1,18 +1,13 @@
 package ru.latyshev.calculator;
 
-import lombok.Data;
-
-@Data
 public class VacationPay {
-    private double avgSalary;
-    private int vacationDays;
+    private final double vacationPay;
 
-    public VacationPay(double avgSalary, int vacationDays) {
-        this.avgSalary = avgSalary;
-        this.vacationDays = vacationDays;
+    public VacationPay(double vacationPay) {
+        this.vacationPay = vacationPay;
     }
 
-    public double calculateVacationPay() {
-        return getAvgSalary() / 29.3 * getVacationDays();
+    public double getVacationPay() {
+        return vacationPay;
     }
 }
