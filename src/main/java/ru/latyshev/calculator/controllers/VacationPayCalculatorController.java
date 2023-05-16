@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import ru.latyshev.calculator.service.VacationPayCalculatorServiceImpl;
 
 @Controller
+@RequestMapping("/calculacte")
 public class VacationPayCalculatorController {
-    @GetMapping("/calculacte")
+    @GetMapping
     public String calculatorPage(@RequestParam(value = "avgSalary", required = false) String avgSalary,
                             @RequestParam(value = "vacationDays", required = false) String vacationDays,
                             Model model) {
