@@ -5,7 +5,7 @@ import ru.latyshev.calculator.VacationPay;
 import java.util.Locale;
 
 public class VacationPayCalculatorServiceImpl implements VacationPayCalculatorService{
-    private static final double AVERAGE_SALARY_PER_MONTH = 29.3;
+    private static final double AVERAGE_NUMBER_OF_DAYS_PER_MONTH = 29.3;
     @Override
     public VacationPay calculateVacationPay(String avgSalary, String vacationDays) {
         if (!checkAvgSalaryType(avgSalary)) {
@@ -22,7 +22,7 @@ public class VacationPayCalculatorServiceImpl implements VacationPayCalculatorSe
         }
 
         return new VacationPay(String.format(Locale.ENGLISH, "%.2f",
-                    avgSalaryDouble / AVERAGE_SALARY_PER_MONTH * vacationDaysInteger));
+                    avgSalaryDouble / AVERAGE_NUMBER_OF_DAYS_PER_MONTH * vacationDaysInteger));
     }
     private boolean checkAvgSalaryType(String avgSalary) {
         try {
